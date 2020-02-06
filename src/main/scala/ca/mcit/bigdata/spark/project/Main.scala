@@ -17,8 +17,7 @@ trait Main {
   val fs = FileSystem.get(conf)
 
   /** SparkSession */
-  val spark: SparkSession = SparkSession
-    .builder()
+  val spark: SparkSession = SparkSession.builder()
     .appName("Spark Streaming Project")
     .master("local[*]")
     .getOrCreate()
@@ -28,5 +27,3 @@ trait Main {
 
   /** SparkStreamingContext */
   val ssc: StreamingContext = new StreamingContext(sc, Seconds(5))
-
-}
