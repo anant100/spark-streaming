@@ -1,0 +1,16 @@
+/*
+@namespace("ca.mcit.bigdata.spark.project")
+
+protocol Thakkar1 {
+
+  record StopTimes {
+
+    int trip_id;
+    string arrival_time;
+    string departure_time;
+    int stop_id;
+    int stop_sequence;
+
+  }
+}
+*/
