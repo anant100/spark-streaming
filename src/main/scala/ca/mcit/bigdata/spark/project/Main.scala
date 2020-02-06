@@ -27,3 +27,4 @@ trait Main {
 
   /** SparkStreamingContext */
   val ssc: StreamingContext = new StreamingContext(sc, Seconds(5))
+}
