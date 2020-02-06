@@ -76,35 +76,3 @@ object SparkStreamingEnricher extends Main with App {
   ssc.awaitTermination()
   spark.close()
 }
-
-
-
-
-/* stopTimes.foreachRDD(microRDD => {
-   val stopTimesDF: DataFrame =
-     microRDD.map(_.split(",", -1))
-     .map(stoptimes => {
-       val genericrecords = StopTimes.newBuilder()
-         .setTripId(stoptimes(0).toInt)
-         .setArrivalTime(stoptimes(1))
-         .setDepartureTime(stoptimes(2))
-         .setStopId(stoptimes(3).toInt)
-         .setStopSequence(stoptimes(4).toInt)
-         .build()
-
-       import spark.implicits._
-
-       microRDD.map(x => AvroDataUtils.recordToBytes(genericrecords))
-         .toDF()
-       //.select(from_avro(genericrecords, avroschema) as 'data).select("data.*")
-     }
-*/
-/*    val conf = new Job()
-    conf.setOutputFormatClass(classOf[AvroKeyOutputFormat[StopTimes]])
-    FileOutputFormat.setOutputPath(conf, new Path("/user/cloudera/summer2019/project5/thakkar/enriched_stop_time/"))
-    AvroJob.setOutputKeySchema(conf, avroschema)*/
-
-/*val avroschema = StopTimes.SCHEMA$
-  val schemaparse = new Schema.Parser().parse("src/main/avro/stop_times.avdl")
-  println(avroschema)
-  println(schemaparse)*/
