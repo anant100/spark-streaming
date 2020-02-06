@@ -26,5 +26,5 @@ trait Main {
   val sc: SparkContext = spark.sparkContext
 
   /** SparkStreamingContext */
-  val ssc: StreamingContex = new StreamingContext(sc, Seconds(5))
+  val ssc: StreamingContext = new StreamingContext(sc, Seconds(5))
 }
