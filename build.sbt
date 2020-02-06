@@ -18,18 +18,7 @@ libraryDependencies += "io.confluent"    % "kafka-avro-serializer"         % con
 // https://mvnrepository.com/artifact/com.databricks/spark-avro
 libraryDependencies += "com.databricks" %% "spark-avro" % "4.0.0"
 
-//libraryDependencies += "org.apache.spark" %% "spark-avro" % "2.4.0"
-
 resolvers ++= Seq(
   "Confluent" at "https://packages.confluent.io/maven",
   Resolver.mavenLocal
 )
-
-/*
-lazy val excludeJpountz = ExclusionRule(organization = "net.jpountz.lz4", name = "lz4")
-lazy val kafkaClients = "org.apache.kafka" % "kafka-clients" % userKafkaVersionHere excludeAll(excludeJpountz) // add more exclusions here
-
-// https://mvnrepository.com/artifact/za.co.absa/abris
-libraryDependencies += "za.co.absa" %% "abris" % "3.0.1"
-
-*/
